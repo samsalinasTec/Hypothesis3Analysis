@@ -1,10 +1,30 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
+# --- Archivos de datos ---
+*.csv
+*.xlsx
+*.xls
+*.json
 
-# Virtual environments
-.venv
+# --- Archivos de logs ---
+*.log
+logs/
+*.out
+
+# --- Archivos del entorno virtual ---
+.venv/
+.env
+__pycache__/
+*.pyc
+
+# --- Archivos de dependencias ---
+uv.lock
+poetry.lock
+*.egg-info/
+dist/
+
+# --- Archivos del sistema ---
+.DS_Store
+Thumbs.db
+
+# --- Otros ---
+.idea/
+.vscode/
