@@ -158,7 +158,7 @@ def main():
                 on='clave_edicion_producto',
                 how='inner'
             )
-            # Igual que tu script original
+            
             dfDetalleCompraFiltrado.drop(columns=["item_completo", "tipo_producto", "numero_sorteo"], inplace=True)
             logger.info(_df_stats(dfDetalleCompraFiltrado, "dfDetalleCompraFiltrado"))
 
@@ -224,7 +224,7 @@ def main():
             ].copy()
             logger.info("Filtrados %d → %d (eliminados=%d)", before, len(df_enriq), before - len(df_enriq))
 
-        # Flags por edición (pre_cierre / semana_cierre) — por fila (como en tu lógica original)
+        # Flags por edición (pre_cierre / semana_cierre) — por fila 
         with _time_block("Etiquetado de ventanas por edición (pre_cierre / semana_cierre)"):
             df_enriq['semana_cierre_ini'] = df_enriq['fecha_fin'] - pd.Timedelta(days=7)
             df_enriq['en_semana_cierre'] = (
